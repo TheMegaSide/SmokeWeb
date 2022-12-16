@@ -109,4 +109,36 @@ public class BDService
                          
         DbExecutor.Execute(ConnectionString, comText, new LiquidHandler());
     }
+    
+    public List<Consumable> GetAllConsumables()
+    {
+        string comText = "Select * from consumables";
+        return DbExecutor.Execute<Consumable>(ConnectionString, comText, new ConsumableHandler());
+    }
+    
+    public Consumable GetConsumableById(int id)
+    {
+        string comText = "Select * from consumables where id="+id;
+        return DbExecutor.Execute<Consumable>(ConnectionString, comText, new ConsumableHandler())[0];
+    }
+
+    public void EditConsumable(Consumable consumable)
+    {
+        string comText = "update consumables set name='"+consumable.name+"', price="+consumable.price+", description='"+consumable.desc+"', \"isAvailable\"='"+consumable.isAvailable+"' where id="+consumable.id;
+        Console.WriteLine($"INFO:{comText}");
+        DbExecutor.Execute(ConnectionString, comText, new ConsumableHandler());
+    }
+
+    public void DeleteConsumable(Consumable consumable)
+    {
+        string comText = "delete from consumables where id="+consumable.id;
+        DbExecutor.Execute(ConnectionString, comText, new ConsumableHandler());
+    }
+
+    public void AddConsumable(Consumable consumable)
+    {
+        string comText = "insert into consumables (name, price, description, \"isAvailable\") values('"+consumable.name+"',"+consumable.price+",'"+consumable.desc+"','"+consumable.isAvailable+"')";
+                         
+        DbExecutor.Execute(ConnectionString, comText, new ConsumableHandler());
+    }
 }

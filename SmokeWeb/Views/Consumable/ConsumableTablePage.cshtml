@@ -1,0 +1,42 @@
+﻿@model List<Consumable>
+
+@{
+    ViewData["Title"] = "Таблица жидкостей для заправки устройств";
+    Layout = "_Layout";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>title</title>
+</head>
+<body>
+<div>
+      <table border="1" class="table" style="border-collapse: collapse; width: 100%;alignment: left">
+          <thead class="thead-dark" >
+          <tr>
+              <th></th>
+              <th >Наименование</th>
+              <th >Цена</th>
+              <th >Описание</th>
+              <th >Наличие</th>
+              </tr>
+          </thead>
+       <tbody>
+          @foreach (var consumable in Model)
+          {
+              <tr>
+                  <td><a class="btn btn-primary" asp-action="ConsumableEdit" asp-route-id="@consumable.id">Профиль</a></td>
+                  
+                  <td >@consumable.name</td>
+                  <td >@consumable.price</td>
+                  <td >@consumable.desc</td>
+                  <td >@consumable.isAvailable</td>
+                  </tr>
+          }
+              </tbody >
+      </table >
+</div>
+</body>
+</html>
