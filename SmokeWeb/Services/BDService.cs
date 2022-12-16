@@ -77,4 +77,36 @@ public class BDService
                          
         DbExecutor.Execute(ConnectionString, comText, new LiquidHandler());
     }
+    
+    public List<Onetime> GetAllOnetimes()
+    {
+        string comText = "Select * from onetimes";
+        return DbExecutor.Execute<Onetime>(ConnectionString, comText, new OnetimeHandler());
+    }
+    
+    public Onetime GetOnetimeById(int id)
+    {
+        string comText = "Select * from onetimes where id="+id;
+        return DbExecutor.Execute<Onetime>(ConnectionString, comText, new OnetimeHandler())[0];
+    }
+
+    public void EditOnetime(Onetime onetime)
+    {
+        string comText = "update onetimes set name='"+onetime.name+"', price="+onetime.price+", description='"+onetime.desc+"', \"isAvailable\"='"+onetime.isAvailable+"' where id="+onetime.id;
+        Console.WriteLine($"INFO:{comText}");
+        DbExecutor.Execute(ConnectionString, comText, new OnetimeHandler());
+    }
+
+    public void DeleteOnetime(Onetime onetime)
+    {
+        string comText = "delete from onetimes where id="+onetime.id;
+        DbExecutor.Execute(ConnectionString, comText, new OnetimeHandler());
+    }
+
+    public void AddOnetime(Onetime onetime)
+    {
+        string comText = "insert into onetimes (name, price, description, \"isAvailable\") values('"+onetime.name+"',"+onetime.price+",'"+onetime.desc+"','"+onetime.isAvailable+"')";
+                         
+        DbExecutor.Execute(ConnectionString, comText, new LiquidHandler());
+    }
 }

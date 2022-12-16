@@ -1,0 +1,42 @@
+﻿@model List<Onetime>
+
+@{
+    ViewData["Title"] = "Таблица одноразовых устройств";
+    Layout = "_Layout";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>title</title>
+</head>
+<body>
+<div>
+      <table border="1" class="table" style="border-collapse: collapse; width: 100%;alignment: left">
+          <thead class="thead-dark" >
+          <tr>
+              <th></th>
+              <th >Наименование</th>
+              <th >Цена</th>
+              <th >Описание</th>
+              <th >Наличие</th>
+              </tr>
+          </thead>
+       <tbody>
+          @foreach (var onetime in Model)
+          {
+              <tr>
+                  <td><a class="btn btn-primary" asp-action="OnetimeEdit" asp-route-id="@onetime.id">Профиль</a></td>
+                  
+                  <td >@onetime.name</td>
+                  <td >@onetime.price</td>
+                  <td >@onetime.desc</td>
+                  <td >@onetime.isAvailable</td>
+                  </tr>
+          }
+              </tbody >
+      </table >
+</div>
+</body>
+</html>
