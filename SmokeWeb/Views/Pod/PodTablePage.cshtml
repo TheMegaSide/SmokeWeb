@@ -1,0 +1,54 @@
+﻿@model List<Pod>
+
+@{
+    ViewData["Title"] = "Таблица водителей";
+    Layout = "_Layout";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>title</title>
+</head>
+<body>
+<div>
+      <table border="1" class="table" style="border-collapse: collapse; width: 100%;alignment: left">
+          <thead class="thead-dark" >
+          <tr>
+              <th></th>
+              <th >Наименование</th>
+              <th >Цена</th>
+              <th >Описание</th>
+              <th >Наличие</th>
+              
+      
+      
+          </tr>
+          </thead>
+       <tbody>
+          @foreach (var pod in Model)
+          {
+              <tr>
+                  <td><a class="btn btn-primary" asp-action="PodEdit" asp-route-id="@pod.id">Профиль</a></td>
+                  
+                  <td >@pod.name</td>
+                  <td >@pod.price</td>
+                  <td >@pod.desc</td>
+                  <td >@pod.isAvailable</td>
+                  
+                 
+      
+                  @* <td><a asp-action="CarDelete" asp-route-id="@car.id">Удалить</a></td> *@
+                  @* <td><a asp-action="GetAutoDoc" asp-route-id="@car.id">Получить паспорт</a></td> *@
+      
+      
+              </tr>
+          }
+              
+          
+          </tbody >
+      </table >
+</div>
+</body>
+</html>
