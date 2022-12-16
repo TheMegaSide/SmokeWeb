@@ -1,12 +1,12 @@
-﻿@model Pod
+﻿@model Liquid
 
 @{
-     ViewData["Title"] = "Профиль пода";
+     ViewData["Title"] = "Профиль жидкости для заправки устройств";
 }
 
 <h1>Изменение данных</h1>
 
-<h4>Под</h4>
+<h4>Жидкость</h4>
 
 <div class="row">
     <div class="col-md-4">
@@ -45,7 +45,7 @@
     </div>
 </div>
 <div>
-<form method="post" action="~/Pod/Delete">
+<form method="post" action="~/Liquid/Delete">
     <input type="hidden" name="id" value="@Model.id"/>
     <p>
         <input type="submit" value="Удалить" class="btn btn-primary"/>
@@ -53,7 +53,7 @@
 </form>
 </div>
 <div>
-    <a asp-action="PodTablePage">Вернуться назад</a>
+    <a asp-action="LiquidTablePage">Вернуться назад</a>
 </div>
 
 @section Scripts {

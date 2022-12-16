@@ -1,7 +1,7 @@
-﻿@model List<Pod>
+﻿@model List<Liquid>
 
 @{
-    ViewData["Title"] = "Таблица подов";
+    ViewData["Title"] = "Таблица жидкостей для заправки устройств";
     Layout = "_Layout";
 }
 
@@ -24,15 +24,15 @@
               </tr>
           </thead>
        <tbody>
-          @foreach (var pod in Model)
+          @foreach (var liquid in Model)
           {
               <tr>
-                  <td><a class="btn btn-primary" asp-action="PodEdit" asp-route-id="@pod.id">Профиль</a></td>
+                  <td><a class="btn btn-primary" asp-action="LiquidEdit" asp-route-id="@liquid.id">Профиль</a></td>
                   
-                  <td >@pod.name</td>
-                  <td >@pod.price</td>
-                  <td >@pod.desc</td>
-                  <td >@pod.isAvailable</td>
+                  <td >@liquid.name</td>
+                  <td >@liquid.price</td>
+                  <td >@liquid.desc</td>
+                  <td >@liquid.isAvailable</td>
                   </tr>
           }
               </tbody >

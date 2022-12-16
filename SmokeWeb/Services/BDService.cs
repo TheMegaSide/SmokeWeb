@@ -45,4 +45,36 @@ public class BDService
                          
         DbExecutor.Execute(ConnectionString, comText, new PodHandler());
     }
+
+    public List<Liquid> GetAllLiquids()
+    {
+        string comText = "Select * from liquids";
+        return DbExecutor.Execute<Liquid>(ConnectionString, comText, new LiquidHandler());
+    }
+    
+    public Liquid GetLiquidById(int id)
+    {
+        string comText = "Select * from liquids where id="+id;
+        return DbExecutor.Execute<Liquid>(ConnectionString, comText, new LiquidHandler())[0];
+    }
+
+    public void EditLiquid(Liquid liquid)
+    {
+        string comText = "update liquids set name='"+liquid.name+"', price="+liquid.price+", description='"+liquid.desc+"', \"isAvailable\"='"+liquid.isAvailable+"' where id="+liquid.id;
+        Console.WriteLine($"INFO:{comText}");
+        DbExecutor.Execute(ConnectionString, comText, new LiquidHandler());
+    }
+
+    public void DeleteLiquid(Liquid liquid)
+    {
+        string comText = "delete from liquids where id="+liquid.id;
+        DbExecutor.Execute(ConnectionString, comText, new LiquidHandler());
+    }
+
+    public void AddLiquid(Liquid liquid)
+    {
+        string comText = "insert into liquids (name, price, description, \"isAvailable\") values('"+liquid.name+"',"+liquid.price+",'"+liquid.desc+"','"+liquid.isAvailable+"')";
+                         
+        DbExecutor.Execute(ConnectionString, comText, new LiquidHandler());
+    }
 }
