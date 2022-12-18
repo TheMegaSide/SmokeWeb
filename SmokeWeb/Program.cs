@@ -4,6 +4,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+//Регистрация сервиса базы данных
 builder.Services.AddScoped<BDService>();
 var app = builder.Build();
 
