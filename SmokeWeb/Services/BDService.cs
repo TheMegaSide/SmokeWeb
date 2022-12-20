@@ -117,7 +117,7 @@ public class BDService
     public void AddOnetime(Onetime onetime)
     {
         string comText = "insert into onetimes (name, price, description, \"isAvailable\") " +
-                         "values('"+onetime.name+"',"+onetime.price.ToString().Replace(',','.')+",'"+onetime.desc+"','"+onetime.isAvailable+"')";
+                         "values('"+onetime.name+"',"+onetime.price.ToString().Replace(',','.')+",'"+onetime.desc+"','"+onetime.isAvailable+"',count="+onetime.count+")";
                          
         DbExecutor.Execute(ConnectionString, comText, new LiquidHandler());
     }
