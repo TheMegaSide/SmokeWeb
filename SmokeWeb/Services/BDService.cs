@@ -6,26 +6,27 @@ namespace SmokeWeb.Services;
 
 public class BDService
 {
+    //Данный клас получает данные от страниц сайта и передает базе данных и наоборот
     public readonly string ConnectionString;
 
     public BDService(IConfiguration configuration)
     {
         ConnectionString = configuration.GetConnectionString("NpgsqlConnection");
     }
-
+    //Данный метод получает все записи из таблицы подов
     public List<Pod> GetAllPods()
     {
         string comText =
             "select *  from pods";
         return DbExecutor.Execute<Pod>(ConnectionString, comText, new PodHandler());
     }
-
+    //Данный метод находит один под по его id
     public Pod GetPodById(int id)
     {
         string comText = "select * from  pods where id="+id;
         return DbExecutor.Execute<Pod>(ConnectionString, comText, new PodHandler())[0];
     }
-
+    //Метод редактирования пода
     public void  EditPod(Pod pod)
     {
         string comText = "update pods " +
@@ -34,13 +35,13 @@ public class BDService
         Console.WriteLine($"INFO:{comText}");
         DbExecutor.Execute(ConnectionString, comText, new PodHandler());
     }
-
+    //Удаление пода
     public void DeletePod(Pod pod)
     {
         string comText = "delete from pods where id="+pod.id;
         DbExecutor.Execute(ConnectionString, comText, new PodHandler());
     }
-
+    //Добавление пода
     public void AddPod(Pod pod)
     {
         string comText = "insert into pods (name, price, description, \"isAvailable\", count) " +

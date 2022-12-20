@@ -1,8 +1,8 @@
 ﻿namespace SmokeWeb.Models;
-
+//Класс-модель объекта
 public class Pod
 {
-    
+        //Атрибуты объекта
         public int id { get; set; }
         public string name { get; set; }
         public double price { get; set; } 
