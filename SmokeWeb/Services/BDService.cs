@@ -28,7 +28,9 @@ public class BDService
 
     public void  EditPod(Pod pod)
     {
-        string comText = "update pods set name='"+pod.name+"', price="+pod.price+", description='"+pod.desc+"', \"isAvailable\"='"+pod.isAvailable+"' where id="+pod.id;
+        string comText = "update pods " +
+                         "set name='"+pod.name+"', price="+pod.price.ToString().Replace(',','.')+", description='"+pod.desc+"', \"isAvailable\"='"+pod.isAvailable+"', count="+pod.count+" " +
+                         "where id="+pod.id;
         Console.WriteLine($"INFO:{comText}");
         DbExecutor.Execute(ConnectionString, comText, new PodHandler());
     }
@@ -41,7 +43,10 @@ public class BDService
 
     public void AddPod(Pod pod)
     {
-        string comText = "insert into pods (name, price, description, \"isAvailable\") values('"+pod.name+"',"+pod.price+",'"+pod.desc+"','"+pod.isAvailable+"')";
+        string comText = "insert into pods (name, price, description, \"isAvailable\", count) " +
+                         "values('" + pod.name + "','" + pod.price.ToString().Replace(',','.') + "','" + pod.desc + "','" + pod.isAvailable + "'," +
+                         pod.count + ")";
+        
                          
         DbExecutor.Execute(ConnectionString, comText, new PodHandler());
     }
@@ -60,7 +65,9 @@ public class BDService
 
     public void EditLiquid(Liquid liquid)
     {
-        string comText = "update liquids set name='"+liquid.name+"', price="+liquid.price+", description='"+liquid.desc+"', \"isAvailable\"='"+liquid.isAvailable+"' where id="+liquid.id;
+        string comText = "update liquids " +
+                         "set name='"+liquid.name+"', price="+liquid.price.ToString().Replace(',','.')+", description='"+liquid.desc+"', \"isAvailable\"='"+liquid.isAvailable+"', count="+liquid.count+" " +
+                         "where id="+liquid.id;
         Console.WriteLine($"INFO:{comText}");
         DbExecutor.Execute(ConnectionString, comText, new LiquidHandler());
     }
@@ -73,7 +80,8 @@ public class BDService
 
     public void AddLiquid(Liquid liquid)
     {
-        string comText = "insert into liquids (name, price, description, \"isAvailable\") values('"+liquid.name+"',"+liquid.price+",'"+liquid.desc+"','"+liquid.isAvailable+"')";
+        string comText = "insert into liquids (name, price, description, \"isAvailable\") " +
+                         "values('"+liquid.name+"',"+liquid.price.ToString().Replace(',','.')+",'"+liquid.desc+"','"+liquid.isAvailable+"',count="+liquid.count+")";
                          
         DbExecutor.Execute(ConnectionString, comText, new LiquidHandler());
     }
@@ -92,7 +100,9 @@ public class BDService
 
     public void EditOnetime(Onetime onetime)
     {
-        string comText = "update onetimes set name='"+onetime.name+"', price="+onetime.price+", description='"+onetime.desc+"', \"isAvailable\"='"+onetime.isAvailable+"' where id="+onetime.id;
+        string comText = "update onetimes " +
+                         "set name='"+onetime.name+"', price="+onetime.price.ToString().Replace(',','.')+", description='"+onetime.desc+"', \"isAvailable\"='"+onetime.isAvailable+"', count="+onetime.count +
+                         "where id="+onetime.id;
         Console.WriteLine($"INFO:{comText}");
         DbExecutor.Execute(ConnectionString, comText, new OnetimeHandler());
     }
@@ -105,7 +115,8 @@ public class BDService
 
     public void AddOnetime(Onetime onetime)
     {
-        string comText = "insert into onetimes (name, price, description, \"isAvailable\") values('"+onetime.name+"',"+onetime.price+",'"+onetime.desc+"','"+onetime.isAvailable+"')";
+        string comText = "insert into onetimes (name, price, description, \"isAvailable\") " +
+                         "values('"+onetime.name+"',"+onetime.price.ToString().Replace(',','.')+",'"+onetime.desc+"','"+onetime.isAvailable+"')";
                          
         DbExecutor.Execute(ConnectionString, comText, new LiquidHandler());
     }
@@ -124,7 +135,9 @@ public class BDService
 
     public void EditConsumable(Consumable consumable)
     {
-        string comText = "update consumables set name='"+consumable.name+"', price="+consumable.price+", description='"+consumable.desc+"', \"isAvailable\"='"+consumable.isAvailable+"' where id="+consumable.id;
+        string comText = "update consumables " +
+                         "set name='"+consumable.name+"', price="+consumable.price.ToString().Replace(',','.')+", description='"+consumable.desc+"', \"isAvailable\"='"+consumable.isAvailable+"' , count="+consumable.count +
+                         "where id="+consumable.id;
         Console.WriteLine($"INFO:{comText}");
         DbExecutor.Execute(ConnectionString, comText, new ConsumableHandler());
     }
@@ -137,7 +150,9 @@ public class BDService
 
     public void AddConsumable(Consumable consumable)
     {
-        string comText = "insert into consumables (name, price, description, \"isAvailable\") values('"+consumable.name+"',"+consumable.price+",'"+consumable.desc+"','"+consumable.isAvailable+"')";
+        string comText = "insert into consumables (name, price, description, \"isAvailable\") " +
+                         "values('"+consumable.name+"',"+consumable.price.ToString().Replace(',','.')
+                         +",'"+consumable.desc+"','"+consumable.isAvailable+"',count="+consumable.count+")";
                          
         DbExecutor.Execute(ConnectionString, comText, new ConsumableHandler());
     }

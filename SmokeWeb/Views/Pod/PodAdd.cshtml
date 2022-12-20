@@ -5,9 +5,9 @@
 }
 
 <!DOCTYPE html>
-<h1>Добавление рейса</h1>
+<h1>Добавление пода</h1>
 
-<h4>Рейс</h4>
+<h4>Под</h4>
 <hr/>
 <div class="row">
     <div class="col-md-4">
@@ -18,7 +18,7 @@
                 <input  asp-for="name" class="form-control"/>
                 <span asp-validation-for="name" class="text-danger"></span>
                 <label asp-for="price" class="control-label">Цена</label>
-                <input  type="number" asp-for="price" class="form-control"/>
+                <input  type="number" step="0.01" min="0" asp-for="price" class="form-control"/>
                 <span asp-validation-for="price" class="text-danger"></span>
                 <label asp-for="desc" class="control-label">Описание</label>
                 <input asp-for="desc" class="form-control" />
@@ -30,15 +30,18 @@
                                 </select>
                 
                 <span asp-validation-for="isAvailable" class="control-label"></span>
+                <label asp-for="count" class="control-label">Количество</label>
+                <input asp-for="count" class="form-control" />
+                <span asp-validation-for="count" class="control-label"></span>
                </div>
-            
+            <br/>
             <div class="form-group">
                 <input type="submit" value="Создать" class="btn btn-primary"/>
             </div>
         </form>
     </div>
 </div>
-
+<br/>
 <div>
     <a class="btn btn-primary" asp-controller="Pod" asp-action="PodTablePage" >Вернуться назад</a>
 </div>

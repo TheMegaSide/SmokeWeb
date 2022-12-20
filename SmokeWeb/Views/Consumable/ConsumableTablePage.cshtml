@@ -1,7 +1,7 @@
 ﻿@model List<Consumable>
 
 @{
-    ViewData["Title"] = "Таблица жидкостей для заправки устройств";
+    ViewData["Title"] = "Таблица расходников";
     Layout = "_Layout";
 }
 
@@ -21,6 +21,7 @@
               <th >Цена</th>
               <th >Описание</th>
               <th >Наличие</th>
+              <th >Количество</th>
               </tr>
           </thead>
        <tbody>
@@ -33,6 +34,7 @@
                   <td >@consumable.price</td>
                   <td >@consumable.desc</td>
                   <td >@consumable.isAvailable</td>
+                  <td >@consumable.count</td>
                   </tr>
           }
               </tbody >

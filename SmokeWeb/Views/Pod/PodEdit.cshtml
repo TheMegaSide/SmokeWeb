@@ -1,7 +1,7 @@
 ﻿@model Pod
 
 @{
-     ViewData["Title"] = "Профиль пода";
+    ViewData["Title"] = "Профиль пода";
 }
 
 <h1>Изменение данных</h1>
@@ -16,44 +16,48 @@
                 <label asp-for="id" class="control-label">Номер</label>
                 <label asp-for="id" class="form-control">@Model.id</label>
                 <span asp-validation-for="id" class="text-danger"></span>
-                                
+
                 <label asp-for="name" class="control-label">Наименование</label>
                 <input asp-for="name" class="form-control"/>
                 <span asp-validation-for="name" class="text-danger"></span>
-                                
+
                 <label asp-for="price" class="control-label">Цена</label>
                 <input asp-for="price" class="form-control"/>
                 <span asp-validation-for="price" class="text-danger"></span>
-                
+
                 <label asp-for="desc" class="control-label">Описание</label>
                 <input asp-for="desc" class="form-control"/>
                 <span asp-validation-for="desc" class="text-danger"></span>
-                
+
                 <label asp-for="isAvailable" class="control-label">Наличие</label>
                 <select asp-for="isAvailable" class="form-control">
-                    <option value ="True">Есть</option>
-                    <option value ="False">Нет</option>
+                    <option value="True">Есть</option>
+                    <option value="False">Нет</option>
                 </select>
                 <span asp-validation-for="isAvailable" class="text-danger"></span>
-                
-                
+                <label asp-for="count" class="control-label">Количество</label>
+                <input asp-for="count" class="form-control"/>
+                <span asp-validation-for="count" class="text-danger"></span>
+
             </div>
+            <br/>
             <div class="form-group">
                 <input type="submit" value="Сохранить" class="btn btn-primary"/>
             </div>
         </form>
     </div>
 </div>
+<br/>
 <div>
-<form method="post" action="~/Pod/Delete">
-    <input type="hidden" name="id" value="@Model.id"/>
-    <p>
-        <input type="submit" value="Удалить" class="btn btn-primary"/>
-    </p>
-</form>
+    <form method="post" action="~/Pod/Delete">
+        <input type="hidden" name="id" value="@Model.id"/>
+        <p>
+            <input type="submit" value="Удалить" class="btn btn-primary"/>
+        </p>
+    </form>
 </div>
 <div>
-    <a asp-action="PodTablePage">Вернуться назад</a>
+    <a class="btn btn-primary" asp-action="PodTablePage">Вернуться назад</a>
 </div>
 
 @section Scripts {

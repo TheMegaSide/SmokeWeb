@@ -16,6 +16,18 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\TheMe\RiderProjects\SmokeWeb\SmokeWeb
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/TheMe/RiderProjects/SmokeWeb/SmokeWeb/Views/Consumable/ConsumableAdd.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29uc3VtYWJsZVxDb25zdW1hYmxlQWRkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/TheMe/RiderProjects/SmokeWeb/SmokeWeb/Views/Consumable/ConsumableEdit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29uc3VtYWJsZVxDb25zdW1hYmxlRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/TheMe/RiderProjects/SmokeWeb/SmokeWeb/Views/Consumable/ConsumableTablePage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29uc3VtYWJsZVxDb25zdW1hYmxlVGFibGVQYWdlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/TheMe/RiderProjects/SmokeWeb/SmokeWeb/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -34,6 +46,18 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/TheMe/RiderProjects/SmokeWeb/SmokeWeb/Views/Liquid/LiquidTablePage.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlxdWlkXExpcXVpZFRhYmxlUGFnZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/TheMe/RiderProjects/SmokeWeb/SmokeWeb/Views/Onetime/OnetimeAdd.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT25ldGltZVxPbmV0aW1lQWRkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/TheMe/RiderProjects/SmokeWeb/SmokeWeb/Views/Onetime/OnetimeEdit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT25ldGltZVxPbmV0aW1lRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/TheMe/RiderProjects/SmokeWeb/SmokeWeb/Views/Onetime/OnetimeTablePage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT25ldGltZVxPbmV0aW1lVGFibGVQYWdlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/TheMe/RiderProjects/SmokeWeb/SmokeWeb/Views/Pod/PodAdd.cshtml]

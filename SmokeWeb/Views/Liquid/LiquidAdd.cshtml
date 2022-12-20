@@ -15,23 +15,26 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="name" class="control-label">Наименование</label>
-                <input  asp-for="name" class="form-control"/>
+                <input asp-for="name" class="form-control"/>
                 <span asp-validation-for="name" class="text-danger"></span>
                 <label asp-for="price" class="control-label">Цена</label>
-                <input  type="number" asp-for="price" class="form-control"/>
+                <input type="number" asp-for="price" class="form-control"/>
                 <span asp-validation-for="price" class="text-danger"></span>
                 <label asp-for="desc" class="control-label">Описание</label>
-                <input asp-for="desc" class="form-control" />
+                <input asp-for="desc" class="form-control"/>
                 <span asp-validation-for="desc" class="control-label"></span>
                 <label asp-for="isAvailable" class="control-label">Наличие</label>
                 <select asp-for="isAvailable" class="form-control">
-                                    <option value ="True">Есть</option>
-                                    <option value ="False">Нет</option>
-                                </select>
-                
+                    <option value="True">Есть</option>
+                    <option value="False">Нет</option>
+                </select>
+
                 <span asp-validation-for="isAvailable" class="control-label"></span>
-               </div>
-            
+                <label asp-for="count" class="control-label">Количество</label>
+                <input asp-for="count" class="form-control"/>
+                <span asp-validation-for="count" class="control-label"></span>
+            </div>
+
             <div class="form-group">
                 <input type="submit" value="Создать" class="btn btn-primary"/>
             </div>
@@ -40,5 +43,5 @@
 </div>
 
 <div>
-    <a class="btn btn-primary" asp-controller="Liquid" asp-action="LiquidTablePage" >Вернуться назад</a>
+    <a class="btn btn-primary" asp-controller="Liquid" asp-action="LiquidTablePage">Вернуться назад</a>
 </div>

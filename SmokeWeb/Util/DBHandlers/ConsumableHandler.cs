@@ -14,7 +14,8 @@ public class ConsumableHandler: IDbExecuteHandler<Consumable>
             name = rdr["name"].ToString(),
             price = (double)rdr["price"],
             desc = rdr["description"].ToString(),
-            isAvailable = (bool)rdr["isAvailable"]
+            isAvailable = (bool)rdr["isAvailable"],
+            count = (int)rdr["count"]
         };
     }
 }
