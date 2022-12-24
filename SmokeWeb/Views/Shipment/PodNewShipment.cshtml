@@ -1,0 +1,41 @@
+﻿@model Shipment
+
+@{
+    Layout = "_Layout";
+}
+<!DOCTYPE html>
+<h1>Закупка пода</h1>
+
+
+<hr/>
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="PodShipmentCreate">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="productid" class="control-label">Наименование</label>
+                <select asp-for="productid" class="form-control">
+                    @foreach(Pod pod in ViewBag.pods){
+                        <option value="@pod.id">@pod.name</option>
+                    }
+                </select>
+                <span asp-validation-for="productid" class="text-danger"></span>
+                <label asp-for="price" class="control-label">Цена</label>
+                <input  type="number" step="0.01" min="0" asp-for="price" class="form-control"/>
+                <span asp-validation-for="price" class="text-danger"></span>
+                <label asp-for="amount" class="control-label">Количество</label>
+                <input asp-for="amount" class="form-control" />
+                <span asp-validation-for="amount" class="control-label"></span>
+                
+               </div>
+            <br/>
+            <div class="form-group">
+                <input type="submit" value="Создать" class="btn btn-primary"/>
+            </div>
+        </form>
+    </div>
+</div>
+<br/>
+<div>
+    <a class="btn btn-primary" asp-controller="Shipment" asp-action="PodShipments" >Вернуться назад</a>
+</div>

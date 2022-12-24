@@ -163,24 +163,26 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\TheMe\\.nuget\\packages\\": {}
+    "C:\\Users\\rummaxx\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\TheMe\\RiderProjects\\SmokeWeb\\SmokeWeb\\SmokeWeb.csproj",
+      "projectUniqueName": "C:\\Users\\rummaxx\\Desktop\\SmokeWeb\\SmokeWeb\\SmokeWeb.csproj",
       "projectName": "SmokeWeb",
-      "projectPath": "C:\\Users\\TheMe\\RiderProjects\\SmokeWeb\\SmokeWeb\\SmokeWeb.csproj",
-      "packagesPath": "C:\\Users\\TheMe\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\TheMe\\RiderProjects\\SmokeWeb\\SmokeWeb\\obj\\",
+      "projectPath": "C:\\Users\\rummaxx\\Desktop\\SmokeWeb\\SmokeWeb\\SmokeWeb.csproj",
+      "packagesPath": "C:\\Users\\rummaxx\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\rummaxx\\Desktop\\SmokeWeb\\SmokeWeb\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\TheMe\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\rummaxx\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -223,7 +225,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Users\\TheMe\\.dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -1,0 +1,42 @@
+﻿@model List<Shipment>
+
+@{
+    ViewData["Title"] = "Таблица закупок по жидкостям";
+    Layout = "_Layout";
+    string name="";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Закупки(жидкости)</title>
+</head>
+<body>
+<div>
+    <table border="1" class="table" style="border-collapse: collapse; width: 100%;alignment: left">
+             <!-- шапка таблицы -->
+             <thead class="thead-dark" >
+             <tr>
+                 <th >Наименование</th>
+                 <th >Цена</th>
+                 <th >Количество</th>
+                 <th >Дата</th>
+                 </tr>
+             </thead>
+             <!-- основная часть таблицы -->
+          <tbody>
+             @foreach (var shipment in Model)
+             {
+                 <tr>
+                     <td >@shipment.name</td>
+                     <td >@shipment.price</td>
+                     <td >@shipment.amount</td>
+                     <td >@shipment.dateof.ToShortDateString()</td>
+                     </tr>
+             }
+                 </tbody >
+         </table >  
+</div>
+</body>
+</html>

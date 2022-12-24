@@ -5,22 +5,33 @@
 <div class="text-center">
     <h1 class="display-4">Склад антитабачного магазина</h1>
     <div>
-    <a style="width:15%"  class="btn btn-primary" asp-controller="Pod" asp-action="PodTablePage">Таблица подов</a>
-        <a style="width:15%" class="btn btn-primary" asp-controller="Pod" asp-action="PodAdd">Добавить под</a>
-        </div>
-    <br/>
-    <div>
-        <a style="width:15%" class="btn btn-primary" asp-controller="Liquid" asp-action="LiquidTablePage">Таблица жидкостей</a>
-        <a style="width:15%" class="btn btn-primary" asp-controller="Liquid" asp-action="LiquidAdd">Добавить жидкость</a>
+        <a style="width:15%; height: 62px " class="btn btn-primary" asp-controller="Pod" asp-action="PodTablePage">Таблица подов</a>
+        <a style="width:15%; height: 62px " class="btn btn-primary" asp-controller="Shipment" asp-action="PodShipments">Закупки подов</a>
+        <a style="width:15%; height: 62px " class="btn btn-primary" asp-controller="Shipment" asp-action="PodNewShipment">Завоз подов</a>
+        <a style="width:15%; height: 62px " class="btn btn-primary" asp-controller="Pod" asp-action="PodAdd">Добавить под</a>
     </div>
     <br/>
     <div>
-        <a style="width:15%" class="btn btn-primary" asp-controller="Onetime" asp-action="OnetimeTablePage">Таблица одноразок</a>
-        <a style="width:15%" class="btn btn-primary" asp-controller="Onetime" asp-action="OnetimeAdd">Добавить одноразку</a>
+        <a style="width:15%; height: 62px " class="btn btn-primary" asp-controller="Liquid" asp-action="LiquidTablePage">Таблица жидкостей</a>
+        <a style="width:15%; height: 62px " class="btn btn-primary" asp-controller="Shipment" asp-action="LiquidShipments">Закупки жидкостей</a>
+        <a style="width:15%; height: 62px " class="btn btn-primary" asp-controller="Shipment" asp-action="LiquidNewShipment">Завоз жидкостей</a>
+        <a style="width:15%; height: 62px " class="btn btn-primary" asp-controller="Liquid" asp-action="LiquidAdd">Добавить жидкость</a>
     </div>
     <br/>
-            <div>
-            <a style="width:15%" class="btn btn-primary" asp-controller="Consumable" asp-action="ConsumableTablePage">Таблица одноразок</a>
-                <a style="width:15%" class="btn btn-primary" asp-controller="Consumable" asp-action="ConsumableAdd">Добавить одноразку</a>
-                </div>
+    <div>
+        <a style="width:15%; height: 62px " class="btn btn-primary" asp-controller="Onetime" asp-action="OnetimeTablePage">Таблица одноразок</a>
+        <a style="width:15%; height: 62px " class="btn btn-primary" asp-controller="Shipment" asp-action="OnetimeShipments">Закупки одноразок</a>
+        <a style="width:15%; height: 62px " class="btn btn-primary" asp-controller="Shipment" asp-action="OnetimeNewShipment">Завоз одноразок</a>
+        <a style="width:15%; height: 62px " class="btn btn-primary" asp-controller="Onetime" asp-action="OnetimeAdd">Добавить одноразку</a>
+    </div>
+    <br/>
+    <div>
+        <a style="width:15%; height: 62px " class="btn btn-primary" asp-controller="Consumable" asp-action="ConsumableTablePage">Таблица расходников</a>
+        <a style="width:15%; height: 62px " class="btn btn-primary" asp-controller="Shipment" asp-action="ConsumableShipments">Закупки расходников</a>
+        <a style="width:15%; height: 62px " class="btn btn-primary" asp-controller="Shipment" asp-action="ConsumableNewShipment">Завоз расходников</a>
+        <a style="width:15%; height: 62px " class="btn btn-primary" asp-controller="Consumable" asp-action="ConsumableAdd">Добавить расходник</a>
+    </div>
+    <div>
+        <a style="width:15%; height: 62px " class="btn btn-primary" asp-controller="Sold" asp-action="SoldTablePage">Продажи</a>
+    </div>
 </div>

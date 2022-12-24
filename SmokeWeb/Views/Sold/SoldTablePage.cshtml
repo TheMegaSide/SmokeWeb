@@ -1,0 +1,90 @@
+﻿@model List<Sold>
+
+@{
+    
+    Layout = "_Layout";
+    string name="";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>title</title>
+</head>
+<body>
+<div>
+      <table border="1" class="table" style="border-collapse: collapse; width: 100%;alignment: left">
+                <!-- шапка таблицы -->
+                <thead class="thead-dark" >
+                <tr>
+                    
+                    <th >Наименование</th>
+                    <th >Дата</th>
+                    <th >Цена</th>
+                    <th >Телефон клиента</th>
+                    <th >Адрес заказа</th>
+                    </tr>
+                </thead>
+                <!-- основная часть таблицы -->
+             <tbody>
+                @foreach (var sold in Model)
+                {
+                    <tr>
+                        @{
+                            
+                            if (sold.category == 1)
+                            {
+                                foreach (Pod pod in ViewBag.pods)
+                                {
+                                    if (pod.id == sold.productid)
+                                    {
+                                        name = pod.name;
+                                    }
+                                }
+                            }
+                            else if (sold.category == 2)
+                            {
+                                foreach (Onetime onetime in ViewBag.onetimes)
+                                {
+                                    if (onetime.id == sold.productid)
+                                    {
+                                        name = onetime.name;
+                                    }
+                                }
+                            }
+                            else if (sold.category == 3)
+                            {
+                                foreach (Liquid liquid in ViewBag.liquids)
+                                {
+                                    if (liquid.id == sold.productid)
+                                    {
+                                        name = liquid.name;
+                                    }
+                                }
+                            }
+                            else if (sold.category == 4)
+                            {
+                                foreach (Consumable consumable in ViewBag.consumables)
+                                {
+                                    if (consumable.id == sold.productid)
+                                    {
+                                        name = consumable.name;
+                                    }
+                                }
+                            }
+                        }
+                        
+                        <td >@name</td>
+                        
+                        <td >@sold.dateof</td>
+                        <td >@sold.price</td>
+                        <td >@sold.clientphone</td>
+                        <td >@sold.clientaddress </td>
+                        </tr>
+                }
+                    </tbody >
+            </table >
+</div>
+</body>
+</html>

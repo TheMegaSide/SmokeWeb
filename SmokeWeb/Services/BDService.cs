@@ -2,6 +2,7 @@
 using SmokeWeb.Util.DB;
 using SmokeWeb.Util.DBHandlers;
 
+
 namespace SmokeWeb.Services;
 
 public class BDService
@@ -156,5 +157,54 @@ public class BDService
                          +",'"+consumable.desc+"','"+consumable.isAvailable+"',count="+consumable.count+")";
                          
         DbExecutor.Execute(ConnectionString, comText, new ConsumableHandler());
+    }
+    
+    public List<Shipment> GetPodShipments()
+    {
+        string comText = "select shipment.id, pods.id as productid, name, shipment.price,  shipment.amount, dateof from pods, shipment "+
+        "where shipment.productid=pods.id and category = 1";
+        return DbExecutor.Execute<Shipment>(ConnectionString, comText, new ShipmentHandler());
+    } 
+    public List<Shipment> GetOnetimeShipments()
+    {
+        string comText = "select shipment.id, onetimes.id as productid, name, shipment.price,  shipment.amount, dateof from onetimes, shipment "+
+                         "where shipment.productid=onetimes.id and category = 2";
+        return DbExecutor.Execute<Shipment>(ConnectionString, comText, new ShipmentHandler());
+    }
+    public List<Shipment> GetLiquidShipments()
+    {
+        string comText = "select shipment.id, liquids.id as productid, name, shipment.price,  shipment.amount, dateof from liquids, shipment "+
+                         "where shipment.productid=liquids.id and category = 3";
+        return DbExecutor.Execute<Shipment>(ConnectionString, comText, new ShipmentHandler());
+    }
+    public List<Shipment> GetConsumablesShipments()
+    {
+        string comText = "select shipment.id, consumables.id as productid, name, shipment.price,  shipment.amount, dateof from consumables, shipment "+
+                         "where shipment.productid=consumables.id and category = 4";
+        return DbExecutor.Execute<Shipment>(ConnectionString, comText, new ShipmentHandler());
+    }
+    public void AddShipment(Shipment shipment, int category)
+    {
+        string comText = "insert into shipment (productid, dateof, amount, price,category) " +
+                         "values("+shipment.productid+",'"+DateTime.Now+"'"
+                         +","+shipment.amount+",'"+shipment.price.ToString().Replace(',','.')+"',"+category+")";
+        
+                         
+        DbExecutor.Execute(ConnectionString, comText, new ShipmentHandler());
+        if(category==1)
+            comText = "update pods set price="+shipment.price.ToString().Replace(',','.')+", count=count+"+shipment.amount+" where id="+shipment.productid;
+        else if(category==2)
+            comText = "update onetimes set price="+shipment.price.ToString().Replace(',','.')+", count=count+"+shipment.amount+" where id="+shipment.productid;
+        else if(category==3)
+            comText = "update liquids set price="+shipment.price.ToString().Replace(',','.')+", count=count+"+shipment.amount+" where id="+shipment.productid;
+        else if(category==4)
+            comText = "update consumables set price="+shipment.price.ToString().Replace(',','.')+", count=count+"+shipment.amount+" where id="+shipment.productid;
+        DbExecutor.Execute(ConnectionString, comText, new ShipmentHandler());
+    }
+
+    public List<Sold> GetAllSold()
+    {
+        string comText = "select * from sold";
+        return DbExecutor.Execute<Sold>(ConnectionString, comText, new SoldHandler());
     }
 }
