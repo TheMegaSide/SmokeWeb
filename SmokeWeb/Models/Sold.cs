@@ -3,12 +3,14 @@
 public class Sold
 {
     public int id { get; set; }
-    public int productid { get; set; }
+    
+    public int client { get; set; }
+    public int[] products { get; set; }
 
     public DateTime dateof { get; set; }
-    public double price { get; set; }
-    public string clientphone { get; set; }
-    public string clientaddress { get; set; }
-    public int category { get; set; }
+    public string state { get; set; }
+    
+    
+  
 
 }

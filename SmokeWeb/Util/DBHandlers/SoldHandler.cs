@@ -13,13 +13,12 @@ public class SoldHandler: IDbExecuteHandler<Sold>
         {
             
             id = (int)rdr["id"],
-            productid = (int)rdr["productid"],
+            client = (int)rdr["client"],
+            products = (int[])rdr["products"],
      
-            dateof = (DateTime)rdr["dateof"],
-            price = (double)rdr["price"],
-            clientphone = rdr["clientphone"].ToString(),
-            clientaddress = rdr["clientaddress"].ToString(),
-            category = (int)rdr["category"]
+            dateof = (DateTime)rdr["date"],
+            state = rdr["state"].ToString()
+            
             
             
             

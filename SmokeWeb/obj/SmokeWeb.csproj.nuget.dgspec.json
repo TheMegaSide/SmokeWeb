@@ -1,27 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\rummaxx\\Desktop\\SmokeWeb\\SmokeWeb\\SmokeWeb.csproj": {}
+    "C:\\Users\\TheMe\\RiderProjects\\SmokeBarWeb\\SmokeWeb\\SmokeWeb.csproj": {}
   },
   "projects": {
-    "C:\\Users\\rummaxx\\Desktop\\SmokeWeb\\SmokeWeb\\SmokeWeb.csproj": {
+    "C:\\Users\\TheMe\\RiderProjects\\SmokeBarWeb\\SmokeWeb\\SmokeWeb.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\rummaxx\\Desktop\\SmokeWeb\\SmokeWeb\\SmokeWeb.csproj",
+        "projectUniqueName": "C:\\Users\\TheMe\\RiderProjects\\SmokeBarWeb\\SmokeWeb\\SmokeWeb.csproj",
         "projectName": "SmokeWeb",
-        "projectPath": "C:\\Users\\rummaxx\\Desktop\\SmokeWeb\\SmokeWeb\\SmokeWeb.csproj",
-        "packagesPath": "C:\\Users\\rummaxx\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\rummaxx\\Desktop\\SmokeWeb\\SmokeWeb\\obj\\",
+        "projectPath": "C:\\Users\\TheMe\\RiderProjects\\SmokeBarWeb\\SmokeWeb\\SmokeWeb.csproj",
+        "packagesPath": "C:\\Users\\TheMe\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\TheMe\\RiderProjects\\SmokeBarWeb\\SmokeWeb\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\rummaxx\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\TheMe\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -64,7 +62,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Users\\TheMe\\.dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }

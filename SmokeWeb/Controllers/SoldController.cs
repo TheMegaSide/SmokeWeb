@@ -15,11 +15,9 @@ public class SoldController : Controller
 
     public IActionResult SoldTablePage()
     {
-        ViewBag.pods = Dbservice.GetAllPods();
-        ViewBag.onetimes = Dbservice.GetAllOnetimes();
-        ViewBag.liquids = Dbservice.GetAllLiquids();
-        ViewBag.consumables = Dbservice.GetAllConsumables();
+        ViewBag.products = Dbservice.GetAllProducts();
         List<Sold> solds = Dbservice.GetAllSold();
+        ViewBag.clients = Dbservice.GetAllClients();
         return View(solds);
     }
 

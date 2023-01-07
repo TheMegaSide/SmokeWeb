@@ -15,22 +15,22 @@ public class BDService
         ConnectionString = configuration.GetConnectionString("NpgsqlConnection");
     }
     //Данный метод получает все записи из таблицы подов
-    public List<Pod> GetAllPods()
+     public List<Pod> GetAllPods()
     {
         string comText =
-            "select *  from pods";
+            "select id, name, price, description, \"isAvailable\", count  from products where category =1";
         return DbExecutor.Execute<Pod>(ConnectionString, comText, new PodHandler());
     }
     //Данный метод находит один под по его id
     public Pod GetPodById(int id)
     {
-        string comText = "select * from  pods where id="+id;
+        string comText = "select id, name, price, description, \"isAvailable\", count from  products where id="+id;
         return DbExecutor.Execute<Pod>(ConnectionString, comText, new PodHandler())[0];
     }
     //Метод редактирования пода
     public void  EditPod(Pod pod)
     {
-        string comText = "update pods " +
+        string comText = "update products " +
                          "set name='"+pod.name+"', price="+pod.price.ToString().Replace(',','.')+", description='"+pod.desc+"', \"isAvailable\"='"+pod.isAvailable+"', count="+pod.count+" " +
                          "where id="+pod.id;
         Console.WriteLine($"INFO:{comText}");
@@ -39,15 +39,15 @@ public class BDService
     //Удаление пода
     public void DeletePod(Pod pod)
     {
-        string comText = "delete from pods where id="+pod.id;
+        string comText = "delete from products where id="+pod.id;
         DbExecutor.Execute(ConnectionString, comText, new PodHandler());
     }
     //Добавление пода
     public void AddPod(Pod pod)
     {
-        string comText = "insert into pods (name, price, description, \"isAvailable\", count) " +
+        string comText = "insert into products (name, price, description, \"isAvailable\", count, category) " +
                          "values('" + pod.name + "','" + pod.price.ToString().Replace(',','.') + "','" + pod.desc + "','" + pod.isAvailable + "'," +
-                         pod.count + ")";
+                         pod.count + ",1)";
         
                          
         DbExecutor.Execute(ConnectionString, comText, new PodHandler());
@@ -55,19 +55,19 @@ public class BDService
 
     public List<Liquid> GetAllLiquids()
     {
-        string comText = "Select * from liquids";
+        string comText = "Select id, name, price, description, \"isAvailable\", count from products where category=3";
         return DbExecutor.Execute<Liquid>(ConnectionString, comText, new LiquidHandler());
     }
     
     public Liquid GetLiquidById(int id)
     {
-        string comText = "Select * from liquids where id="+id;
+        string comText = "Select id, name, price, description, \"isAvailable\", count from products where id="+id;
         return DbExecutor.Execute<Liquid>(ConnectionString, comText, new LiquidHandler())[0];
     }
 
     public void EditLiquid(Liquid liquid)
     {
-        string comText = "update liquids " +
+        string comText = "update products " +
                          "set name='"+liquid.name+"', price="+liquid.price.ToString().Replace(',','.')+", description='"+liquid.desc+"', \"isAvailable\"='"+liquid.isAvailable+"', count="+liquid.count+" " +
                          "where id="+liquid.id;
         Console.WriteLine($"INFO:{comText}");
@@ -76,33 +76,33 @@ public class BDService
 
     public void DeleteLiquid(Liquid liquid)
     {
-        string comText = "delete from liquids where id="+liquid.id;
+        string comText = "delete from products where id="+liquid.id;
         DbExecutor.Execute(ConnectionString, comText, new LiquidHandler());
     }
 
     public void AddLiquid(Liquid liquid)
     {
-        string comText = "insert into liquids (name, price, description, \"isAvailable\") " +
-                         "values('"+liquid.name+"',"+liquid.price.ToString().Replace(',','.')+",'"+liquid.desc+"','"+liquid.isAvailable+"',count="+liquid.count+")";
+        string comText = "insert into products (name, price, description, \"isAvailable\",count, category) " +
+                         "values('"+liquid.name+"',"+liquid.price.ToString().Replace(',','.')+",'"+liquid.desc+"','"+liquid.isAvailable+"',"+liquid.count+",3)";
                          
         DbExecutor.Execute(ConnectionString, comText, new LiquidHandler());
     }
     
     public List<Onetime> GetAllOnetimes()
     {
-        string comText = "Select * from onetimes";
+        string comText = "Select id, name, price, description, \"isAvailable\", count from products where category =2";
         return DbExecutor.Execute<Onetime>(ConnectionString, comText, new OnetimeHandler());
     }
     
     public Onetime GetOnetimeById(int id)
     {
-        string comText = "Select * from onetimes where id="+id;
+        string comText = "Select id, name, price, description, \"isAvailable\", count from onetimes where id="+id;
         return DbExecutor.Execute<Onetime>(ConnectionString, comText, new OnetimeHandler())[0];
     }
 
     public void EditOnetime(Onetime onetime)
     {
-        string comText = "update onetimes " +
+        string comText = "update products " +
                          "set name='"+onetime.name+"', price="+onetime.price.ToString().Replace(',','.')+", description='"+onetime.desc+"', \"isAvailable\"='"+onetime.isAvailable+"', count="+onetime.count +
                          "where id="+onetime.id;
         Console.WriteLine($"INFO:{comText}");
@@ -111,33 +111,33 @@ public class BDService
 
     public void DeleteOnetime(Onetime onetime)
     {
-        string comText = "delete from onetimes where id="+onetime.id;
+        string comText = "delete from products where id="+onetime.id;
         DbExecutor.Execute(ConnectionString, comText, new OnetimeHandler());
     }
 
     public void AddOnetime(Onetime onetime)
     {
-        string comText = "insert into onetimes (name, price, description, \"isAvailable\") " +
-                         "values('"+onetime.name+"',"+onetime.price.ToString().Replace(',','.')+",'"+onetime.desc+"','"+onetime.isAvailable+"',count="+onetime.count+")";
+        string comText = "insert into products(name, price, description, \"isAvailable\", count, category) " +
+                         "values('"+onetime.name+"',"+onetime.price.ToString().Replace(',','.')+",'"+onetime.desc+"','"+onetime.isAvailable+"',"+onetime.count+",2)";
                          
         DbExecutor.Execute(ConnectionString, comText, new LiquidHandler());
     }
     
     public List<Consumable> GetAllConsumables()
     {
-        string comText = "Select * from consumables";
+        string comText = "Select id, name, price, description, \"isAvailable\", count from products where category =4";
         return DbExecutor.Execute<Consumable>(ConnectionString, comText, new ConsumableHandler());
     }
     
     public Consumable GetConsumableById(int id)
     {
-        string comText = "Select * from consumables where id="+id;
+        string comText = "Select id, name, price, description, \"isAvailable\", count from products where id="+id;
         return DbExecutor.Execute<Consumable>(ConnectionString, comText, new ConsumableHandler())[0];
     }
 
     public void EditConsumable(Consumable consumable)
     {
-        string comText = "update consumables " +
+        string comText = "update products " +
                          "set name='"+consumable.name+"', price="+consumable.price.ToString().Replace(',','.')+", description='"+consumable.desc+"', \"isAvailable\"='"+consumable.isAvailable+"' , count="+consumable.count +
                          "where id="+consumable.id;
         Console.WriteLine($"INFO:{comText}");
@@ -146,41 +146,42 @@ public class BDService
 
     public void DeleteConsumable(Consumable consumable)
     {
-        string comText = "delete from consumables where id="+consumable.id;
+        string comText = "delete from products where id="+consumable.id;
         DbExecutor.Execute(ConnectionString, comText, new ConsumableHandler());
     }
 
     public void AddConsumable(Consumable consumable)
     {
-        string comText = "insert into consumables (name, price, description, \"isAvailable\") " +
+        string comText = "insert into products (name, price, description, \"isAvailable\", count, category) " +
                          "values('"+consumable.name+"',"+consumable.price.ToString().Replace(',','.')
-                         +",'"+consumable.desc+"','"+consumable.isAvailable+"',count="+consumable.count+")";
+                         +",'"+consumable.desc+"','"+consumable.isAvailable+"',"+consumable.count+", 4)";
                          
         DbExecutor.Execute(ConnectionString, comText, new ConsumableHandler());
     }
     
+    
     public List<Shipment> GetPodShipments()
     {
-        string comText = "select shipment.id, pods.id as productid, name, shipment.price,  shipment.amount, dateof from pods, shipment "+
-        "where shipment.productid=pods.id and category = 1";
+        string comText = "select shipment.id, products.id as productid, name, shipment.price,  shipment.amount, dateof from products, shipment "+
+        "where shipment.productid=products.id and products.category = 1";
         return DbExecutor.Execute<Shipment>(ConnectionString, comText, new ShipmentHandler());
     } 
     public List<Shipment> GetOnetimeShipments()
     {
-        string comText = "select shipment.id, onetimes.id as productid, name, shipment.price,  shipment.amount, dateof from onetimes, shipment "+
-                         "where shipment.productid=onetimes.id and category = 2";
+        string comText = "select shipment.id, products.id as productid, name, shipment.price,  shipment.amount, dateof from products, shipment "+
+                         "where shipment.productid=products.id and products.category = 2";
         return DbExecutor.Execute<Shipment>(ConnectionString, comText, new ShipmentHandler());
     }
     public List<Shipment> GetLiquidShipments()
     {
-        string comText = "select shipment.id, liquids.id as productid, name, shipment.price,  shipment.amount, dateof from liquids, shipment "+
-                         "where shipment.productid=liquids.id and category = 3";
+        string comText = "select shipment.id, products.id as productid, name, shipment.price,  shipment.amount, dateof from products, shipment "+
+                         "where shipment.productid=products.id and products.category = 3";
         return DbExecutor.Execute<Shipment>(ConnectionString, comText, new ShipmentHandler());
     }
     public List<Shipment> GetConsumablesShipments()
     {
-        string comText = "select shipment.id, consumables.id as productid, name, shipment.price,  shipment.amount, dateof from consumables, shipment "+
-                         "where shipment.productid=consumables.id and category = 4";
+        string comText = "select shipment.id, products.id as productid, name, shipment.price,  shipment.amount, dateof from products, shipment "+
+                         "where shipment.productid=products.id and products.category = 4";
         return DbExecutor.Execute<Shipment>(ConnectionString, comText, new ShipmentHandler());
     }
     public void AddShipment(Shipment shipment, int category)
@@ -191,14 +192,9 @@ public class BDService
         
                          
         DbExecutor.Execute(ConnectionString, comText, new ShipmentHandler());
-        if(category==1)
-            comText = "update pods set price="+shipment.price.ToString().Replace(',','.')+", count=count+"+shipment.amount+" where id="+shipment.productid;
-        else if(category==2)
-            comText = "update onetimes set price="+shipment.price.ToString().Replace(',','.')+", count=count+"+shipment.amount+" where id="+shipment.productid;
-        else if(category==3)
-            comText = "update liquids set price="+shipment.price.ToString().Replace(',','.')+", count=count+"+shipment.amount+" where id="+shipment.productid;
-        else if(category==4)
-            comText = "update consumables set price="+shipment.price.ToString().Replace(',','.')+", count=count+"+shipment.amount+" where id="+shipment.productid;
+        
+            comText = "update products set price="+shipment.price.ToString().Replace(',','.')+", count=count+"+shipment.amount+" where id="+shipment.productid;
+        
         DbExecutor.Execute(ConnectionString, comText, new ShipmentHandler());
     }
 
@@ -206,5 +202,17 @@ public class BDService
     {
         string comText = "select * from sold";
         return DbExecutor.Execute<Sold>(ConnectionString, comText, new SoldHandler());
+    }
+
+    public List<Pod> GetAllProducts()
+    {
+        string comText = "select id, name, price, description, \"isAvailable\", count from products";
+        return DbExecutor.Execute<Pod>(ConnectionString, comText, new PodHandler());
+    }
+
+    public List<Client> GetAllClients()
+    {
+        string comText = "select * from clients";
+        return DbExecutor.Execute<Client>(ConnectionString, comText, new ClientHandler());
     }
 }

@@ -3,7 +3,11 @@
 @{
     
     Layout = "_Layout";
-    string name="";
+    string answer = "";
+    string username = "";
+    string phone = "";
+    string address = "";
+    double sum = 0;
 }
 
 <!DOCTYPE html>
@@ -19,11 +23,12 @@
                 <thead class="thead-dark" >
                 <tr>
                     
-                    <th >Наименование</th>
+                    <th >Заказ</th>
+                    <th >Клиент</th>
                     <th >Дата</th>
-                    <th >Цена</th>
                     <th >Телефон клиента</th>
                     <th >Адрес заказа</th>
+                    <th >Статус</th>
                     </tr>
                 </thead>
                 <!-- основная часть таблицы -->
@@ -33,54 +38,42 @@
                     <tr>
                         @{
                             
-                            if (sold.category == 1)
-                            {
-                                foreach (Pod pod in ViewBag.pods)
+                            
+                                foreach (var product in @sold.products)
                                 {
-                                    if (pod.id == sold.productid)
+                                    string name = "";
+                                    double price = 0;
+                                    foreach (var products in ViewBag.products)
                                     {
-                                        name = pod.name;
+                                        if (product == products.id)
+                                        {
+                                            answer += products.name + '-' + products.price + "\n";
+                                            sum += products.price;
+                                        }
                                     }
                                 }
                             }
-                            else if (sold.category == 2)
+                        
+                        <td>@answer
+                            <br/>
+                            Сумаа: @sum</td>
+                        @{
+                            foreach (var client in ViewBag.clients)
                             {
-                                foreach (Onetime onetime in ViewBag.onetimes)
+                                if (client.id == sold.client)
                                 {
-                                    if (onetime.id == sold.productid)
-                                    {
-                                        name = onetime.name;
-                                    }
-                                }
-                            }
-                            else if (sold.category == 3)
-                            {
-                                foreach (Liquid liquid in ViewBag.liquids)
-                                {
-                                    if (liquid.id == sold.productid)
-                                    {
-                                        name = liquid.name;
-                                    }
-                                }
-                            }
-                            else if (sold.category == 4)
-                            {
-                                foreach (Consumable consumable in ViewBag.consumables)
-                                {
-                                    if (consumable.id == sold.productid)
-                                    {
-                                        name = consumable.name;
-                                    }
+                                    username = client.username;
+                                    address = client.address;
+                                    phone = client.phone;
                                 }
                             }
                         }
-                        
-                        <td >@name</td>
-                        
+                        <td >@username</td>
                         <td >@sold.dateof</td>
-                        <td >@sold.price</td>
-                        <td >@sold.clientphone</td>
-                        <td >@sold.clientaddress </td>
+                        <td >@phone</td>
+                        <td >@address</td>
+                        <td >@sold.state</td>
+                        
                         </tr>
                 }
                     </tbody >
