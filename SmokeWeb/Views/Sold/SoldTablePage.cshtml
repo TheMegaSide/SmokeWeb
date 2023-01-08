@@ -1,9 +1,10 @@
-﻿@model List<Sold>
+﻿@using System.Collections;
+@model List<Sold>
 
 @{
-    
+
     Layout = "_Layout";
-    string answer = "";
+    ArrayList answer = new ArrayList();
     string username = "";
     string phone = "";
     string address = "";
@@ -37,26 +38,31 @@
                 {
                     <tr>
                         @{
-                            
-                            
-                                foreach (var product in @sold.products)
+
+
+                            foreach (var product in @sold.products)
+                            {
+                                string name = "";
+                                double price = 0;
+                                foreach (var products in ViewBag.products)
                                 {
-                                    string name = "";
-                                    double price = 0;
-                                    foreach (var products in ViewBag.products)
+                                    if (product == products.id)
                                     {
-                                        if (product == products.id)
-                                        {
-                                            answer += products.name + '-' + products.price + "\n";
-                                            sum += products.price;
-                                        }
+                                        answer.Add(products.name + '-' + products.price);
+                                        sum += products.price;
                                     }
                                 }
                             }
-                        
-                        <td>@answer
+                        }
+
+                        <td>@foreach (var product in answer)
+                            {
+                                @product.ToString();
+                                <br />
+                            }
+                            
                             <br/>
-                            Сумаа: @sum</td>
+                            Сумма: @sum</td>
                         @{
                             foreach (var client in ViewBag.clients)
                             {
