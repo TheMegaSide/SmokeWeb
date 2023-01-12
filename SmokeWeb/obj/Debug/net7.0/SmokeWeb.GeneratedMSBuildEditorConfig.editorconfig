@@ -9,121 +9,121 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = SmokeWeb
 build_property.RootNamespace = SmokeWeb
-build_property.ProjectDir = C:\Users\rummaxx\source\repos\SmokeWeb\SmokeWeb\
+build_property.ProjectDir = C:\Users\TheMe\RiderProjects\SmokeBarWeb\SmokeWeb\
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\rummaxx\source\repos\SmokeWeb\SmokeWeb
+build_property.MSBuildProjectDirectory = C:\Users\TheMe\RiderProjects\SmokeBarWeb\SmokeWeb
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/rummaxx/source/repos/SmokeWeb/SmokeWeb/Views/Consumable/ConsumableAdd.cshtml]
+[C:/Users/TheMe/RiderProjects/SmokeBarWeb/SmokeWeb/Views/Consumable/ConsumableAdd.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29uc3VtYWJsZVxDb25zdW1hYmxlQWRkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rummaxx/source/repos/SmokeWeb/SmokeWeb/Views/Consumable/ConsumableEdit.cshtml]
+[C:/Users/TheMe/RiderProjects/SmokeBarWeb/SmokeWeb/Views/Consumable/ConsumableEdit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29uc3VtYWJsZVxDb25zdW1hYmxlRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rummaxx/source/repos/SmokeWeb/SmokeWeb/Views/Consumable/ConsumableTablePage.cshtml]
+[C:/Users/TheMe/RiderProjects/SmokeBarWeb/SmokeWeb/Views/Consumable/ConsumableTablePage.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29uc3VtYWJsZVxDb25zdW1hYmxlVGFibGVQYWdlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rummaxx/source/repos/SmokeWeb/SmokeWeb/Views/Home/Index.cshtml]
+[C:/Users/TheMe/RiderProjects/SmokeBarWeb/SmokeWeb/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rummaxx/source/repos/SmokeWeb/SmokeWeb/Views/Home/Privacy.cshtml]
+[C:/Users/TheMe/RiderProjects/SmokeBarWeb/SmokeWeb/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rummaxx/source/repos/SmokeWeb/SmokeWeb/Views/Liquid/LiquidAdd.cshtml]
+[C:/Users/TheMe/RiderProjects/SmokeBarWeb/SmokeWeb/Views/Liquid/LiquidAdd.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlxdWlkXExpcXVpZEFkZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rummaxx/source/repos/SmokeWeb/SmokeWeb/Views/Liquid/LiquidEdit.cshtml]
+[C:/Users/TheMe/RiderProjects/SmokeBarWeb/SmokeWeb/Views/Liquid/LiquidEdit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlxdWlkXExpcXVpZEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rummaxx/source/repos/SmokeWeb/SmokeWeb/Views/Liquid/LiquidTablePage.cshtml]
+[C:/Users/TheMe/RiderProjects/SmokeBarWeb/SmokeWeb/Views/Liquid/LiquidTablePage.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlxdWlkXExpcXVpZFRhYmxlUGFnZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rummaxx/source/repos/SmokeWeb/SmokeWeb/Views/Onetime/OnetimeAdd.cshtml]
+[C:/Users/TheMe/RiderProjects/SmokeBarWeb/SmokeWeb/Views/Onetime/OnetimeAdd.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT25ldGltZVxPbmV0aW1lQWRkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rummaxx/source/repos/SmokeWeb/SmokeWeb/Views/Onetime/OnetimeEdit.cshtml]
+[C:/Users/TheMe/RiderProjects/SmokeBarWeb/SmokeWeb/Views/Onetime/OnetimeEdit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT25ldGltZVxPbmV0aW1lRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rummaxx/source/repos/SmokeWeb/SmokeWeb/Views/Onetime/OnetimeTablePage.cshtml]
+[C:/Users/TheMe/RiderProjects/SmokeBarWeb/SmokeWeb/Views/Onetime/OnetimeTablePage.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT25ldGltZVxPbmV0aW1lVGFibGVQYWdlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rummaxx/source/repos/SmokeWeb/SmokeWeb/Views/Pod/PodAdd.cshtml]
+[C:/Users/TheMe/RiderProjects/SmokeBarWeb/SmokeWeb/Views/Pod/PodAdd.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9kXFBvZEFkZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rummaxx/source/repos/SmokeWeb/SmokeWeb/Views/Pod/PodEdit.cshtml]
+[C:/Users/TheMe/RiderProjects/SmokeBarWeb/SmokeWeb/Views/Pod/PodEdit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9kXFBvZEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rummaxx/source/repos/SmokeWeb/SmokeWeb/Views/Pod/PodTablePage.cshtml]
+[C:/Users/TheMe/RiderProjects/SmokeBarWeb/SmokeWeb/Views/Pod/PodTablePage.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9kXFBvZFRhYmxlUGFnZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rummaxx/source/repos/SmokeWeb/SmokeWeb/Views/Shared/Error.cshtml]
+[C:/Users/TheMe/RiderProjects/SmokeBarWeb/SmokeWeb/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rummaxx/source/repos/SmokeWeb/SmokeWeb/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/TheMe/RiderProjects/SmokeBarWeb/SmokeWeb/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rummaxx/source/repos/SmokeWeb/SmokeWeb/Views/Shipment/ConsumableNewShipment.cshtml]
+[C:/Users/TheMe/RiderProjects/SmokeBarWeb/SmokeWeb/Views/Shipment/ConsumableNewShipment.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hpcG1lbnRcQ29uc3VtYWJsZU5ld1NoaXBtZW50LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rummaxx/source/repos/SmokeWeb/SmokeWeb/Views/Shipment/ConsumableShipments.cshtml]
+[C:/Users/TheMe/RiderProjects/SmokeBarWeb/SmokeWeb/Views/Shipment/ConsumableShipments.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hpcG1lbnRcQ29uc3VtYWJsZVNoaXBtZW50cy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rummaxx/source/repos/SmokeWeb/SmokeWeb/Views/Shipment/LiquidNewShipment.cshtml]
+[C:/Users/TheMe/RiderProjects/SmokeBarWeb/SmokeWeb/Views/Shipment/LiquidNewShipment.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hpcG1lbnRcTGlxdWlkTmV3U2hpcG1lbnQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rummaxx/source/repos/SmokeWeb/SmokeWeb/Views/Shipment/LiquidShipments.cshtml]
+[C:/Users/TheMe/RiderProjects/SmokeBarWeb/SmokeWeb/Views/Shipment/LiquidShipments.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hpcG1lbnRcTGlxdWlkU2hpcG1lbnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rummaxx/source/repos/SmokeWeb/SmokeWeb/Views/Shipment/OnetimeNewShipment.cshtml]
+[C:/Users/TheMe/RiderProjects/SmokeBarWeb/SmokeWeb/Views/Shipment/OnetimeNewShipment.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hpcG1lbnRcT25ldGltZU5ld1NoaXBtZW50LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rummaxx/source/repos/SmokeWeb/SmokeWeb/Views/Shipment/OnetimeShipments.cshtml]
+[C:/Users/TheMe/RiderProjects/SmokeBarWeb/SmokeWeb/Views/Shipment/OnetimeShipments.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hpcG1lbnRcT25ldGltZVNoaXBtZW50cy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rummaxx/source/repos/SmokeWeb/SmokeWeb/Views/Shipment/PodNewShipment.cshtml]
+[C:/Users/TheMe/RiderProjects/SmokeBarWeb/SmokeWeb/Views/Shipment/PodNewShipment.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hpcG1lbnRcUG9kTmV3U2hpcG1lbnQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rummaxx/source/repos/SmokeWeb/SmokeWeb/Views/Shipment/PodShipments.cshtml]
+[C:/Users/TheMe/RiderProjects/SmokeBarWeb/SmokeWeb/Views/Shipment/PodShipments.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hpcG1lbnRcUG9kU2hpcG1lbnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rummaxx/source/repos/SmokeWeb/SmokeWeb/Views/Sold/SoldTablePage.cshtml]
+[C:/Users/TheMe/RiderProjects/SmokeBarWeb/SmokeWeb/Views/Sold/SoldTablePage.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU29sZFxTb2xkVGFibGVQYWdlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rummaxx/source/repos/SmokeWeb/SmokeWeb/Views/_ViewImports.cshtml]
+[C:/Users/TheMe/RiderProjects/SmokeBarWeb/SmokeWeb/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rummaxx/source/repos/SmokeWeb/SmokeWeb/Views/_ViewStart.cshtml]
+[C:/Users/TheMe/RiderProjects/SmokeBarWeb/SmokeWeb/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rummaxx/source/repos/SmokeWeb/SmokeWeb/Views/Shared/_Layout.cshtml]
+[C:/Users/TheMe/RiderProjects/SmokeBarWeb/SmokeWeb/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-nrafwnr7v2

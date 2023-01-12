@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "2qOX6MKzokBR9ozCBsRdB5YgN11ZsMV9oadoETs5GFcz8lprTxCPeUs7DVa1reC/5rEQZYy5Cg1L7BpDl5yl1A==",
+  "dgSpecHash": "CRZBrCJIYl6+M6xs82TRALOTWt7EtypV9HJlF9UstQTZiz7Nsm6bykeA8v5gc7dk48nXxVjd7p9A9SsOsGjsKw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\rummaxx\\source\\repos\\SmokeWeb\\SmokeWeb\\SmokeWeb.csproj",
+  "projectFilePath": "C:\\Users\\TheMe\\RiderProjects\\SmokeBarWeb\\SmokeWeb\\SmokeWeb.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\rummaxx\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.0\\microsoft.extensions.logging.abstractions.6.0.0.nupkg.sha512",
-    "C:\\Users\\rummaxx\\.nuget\\packages\\npgsql\\7.0.0\\npgsql.7.0.0.nupkg.sha512",
-    "C:\\Users\\rummaxx\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+    "C:\\Users\\TheMe\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.0\\microsoft.extensions.logging.abstractions.6.0.0.nupkg.sha512",
+    "C:\\Users\\TheMe\\.nuget\\packages\\npgsql\\7.0.0\\npgsql.7.0.0.nupkg.sha512",
+    "C:\\Users\\TheMe\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
   ],
   "logs": []
 }
