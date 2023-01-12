@@ -22,7 +22,7 @@
                 <span asp-validation-for="name" class="text-danger"></span>
 
                 <label asp-for="price" class="control-label">Цена</label>
-                <input asp-for="price" class="form-control"/>
+                <input  type="number" step="0.01" min="0.00" asp-for="price" class="form-control"/>
                 <span asp-validation-for="price" class="text-danger"></span>
 
                 <label asp-for="desc" class="control-label">Описание</label>
